@@ -40,7 +40,7 @@ try:
     current_mode = get_current_mode(argument.interface)
 
     if "Monitor" in current_mode:
-        print(f'[+] Az adapter mode sikeresen megváltozott Monitor-ra.')
+        print(f'[+] Az adapter mode sikeresen megváltozott Monitor-ra.\nJelenlegi mód: {current_mode}')
     else:
         print('[-] Monitor mode aktiválása sikertelen.')
 except subprocess.CalledProcessError:
