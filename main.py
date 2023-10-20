@@ -23,8 +23,8 @@ def get_argument():
 
 def get_current_mode(interface):
     iwconfig_result = subprocess.check_output(["iwconfig", interface])
-    result = "Mode:Monitor"
-    adapter_search_result = re.search(result, iwconfig_result.decode('utf-8'))
+    pattern = "Mode:Monitor"
+    adapter_search_result = re.search(pattern, iwconfig_result.decode('utf-8'))
     if adapter_search_result:
         return adapter_search_result.group(0)
     else:
